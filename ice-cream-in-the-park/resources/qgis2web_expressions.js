@@ -385,19 +385,19 @@ function fnc_strpos(values, context) {
 };
 
 function fnc_left(values, context) {
-    return false;
+    return String(values[0]).substr(0, values[1]);
 };
 
 function fnc_right(values, context) {
-    return false;
+     return String(values[0]).substr(0, values[1]);
 };
 
 function fnc_rpad(values, context) {
-    return false;
+    return String(values[0]).padEnd(values[1], values[2]);
 };
 
 function fnc_lpad(values, context) {
-    return false;
+    return String(values[0]).padStart(values[1], values[2]);
 };
 
 function fnc_format(values, context) {
@@ -766,7 +766,7 @@ function fnc_project_color(values, context) {
 
 
 
-function exp_label_road_label_pts_3_eval_expression(context) {
+function exp_label_road_label_pts_4_eval_expression(context) {
     // regexp_substr(label, '[0-9]+')
 
     var feature = context.feature;
